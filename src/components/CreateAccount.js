@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { creatAccount } from "../Api.fetch"
 import { Link } from "react-router-dom"
+import '../css/CreateAccount.css'
 
 const CreateAccount = () => {
     const [username, setUsername] = useState('')
@@ -12,7 +13,9 @@ const CreateAccount = () => {
                 <span className="cl">Craigs List</span>
                 <span className="lite">.lite</span>
             </div>
-            <button><Link to="/">go to login</Link></button>
+            <div id='login-container'>
+                <Link to="/">login</Link>
+            </div>
         </div>
         <form onSubmit={async (event) => {
             event.preventDefault()

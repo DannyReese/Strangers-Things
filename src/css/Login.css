@@ -6,4 +6,10 @@
 }
 #button{
     margin-left: .5em;
+    border-style: solid;
+    border-width: 1px;
+}
+ 
+#sign-up-container{
+    margin-right: 1em;
 }

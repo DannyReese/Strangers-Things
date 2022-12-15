@@ -19,23 +19,28 @@ const Login = ({ setToken }) => {
                     <span className="cl">Craigs List</span>
                     <span className="lite">.lite</span>
                 </div>
+                <div id="sign-up-container">
+                    <Link to='/create_account'>Sign-Up</Link>
+                </div>
             </div>
             <form >
                 <input id="input1" type='text' placeholder='username..' onChange={event => setUsername(event.target.value)}></input>
-                <input id='input2' type='text' placeholder='password..' onChange={event => setPassword(event.target.value)}></input>
-                <button id="button" onMouseOver={async (event) => {
-                    event.preventDefault()
-                    try {
+                <input id='input2' type='password' placeholder='password..' onChange={event => setPassword(event.target.value)}></input>
 
-                        const resp = await login(username, password)
-                        setIsMember(resp.success)
-                        setToken(userToken)
+                <button id="button" onMouseOver={
+                    async (event) => {
+                        event.preventDefault()
+                        try {
+
+                            const resp = await login(username, password)
+                            setIsMember(resp.success)
+                            setToken(userToken)
 
 
-                    } catch (e) {
-                        console.log('didnt work')
-                    }
-                }}>{isMember ? <Link to='/home'>Submit</Link> : "Submit"}</button>
+                        } catch (e) {
+                            console.log('didnt work')
+                        }
+                    }}>{isMember ? <Link to='/home'>Login</Link> : "Login"}</button>
 
             </form>
         </div>

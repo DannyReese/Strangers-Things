@@ -12,7 +12,7 @@ const Title = ({isLoggedIn,setIsLoggedIn}) => {
          <div className='butt'>
                 <Link className='link' to='/home'>Home</Link>
                 <Link className='link' to='/create_post'>Create Post</Link>
-                <Link className='link' to='/create_account'>Create Account</Link>
+               
                 <Link className='link' to='/'>logout</Link>
             
             </div>

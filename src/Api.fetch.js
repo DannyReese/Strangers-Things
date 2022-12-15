@@ -59,7 +59,7 @@ export const creatAccount = async (username, password) => {
 
 export const login = async (username, password) => {
     try {
-        const resp = await fetch(`${URL}/users/login`, {
+        const resp = await fetch(`${URL}users/login`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -81,3 +81,19 @@ export const login = async (username, password) => {
     }
 }
 
+export const profile = async () => {
+    try {
+        const resp = await fetch(`${URL}users/me`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            },
+        })
+        const data = await resp.json()
+
+        return data;
+    }
+    catch (e){
+        console.log(e)
+    }
+} 
