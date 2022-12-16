@@ -8,12 +8,12 @@ export const fetchPosts = async () => {
     return data
 };
 
-export const creatPost = async ({ title, description, price, token }) => {
+export const creatPost = async ({ title, description, price, location }) => {
     const resp = await fetch(`${URL}posts`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
+            'Authorization': `Bearer ${localStorage.getItem('token')}`
 
         },
         body: JSON.stringify({
@@ -21,6 +21,7 @@ export const creatPost = async ({ title, description, price, token }) => {
                 title: `${title}`,
                 description: `${description}`,
                 price: `${price}`,
+                location: `${location}`,
                 willDeliver: true
             }
         })
@@ -93,7 +94,53 @@ export const profile = async () => {
 
         return data;
     }
-    catch (e){
+    catch (e) {
         console.log(e)
     }
-} 
+}
+
+export const deletePost = async (postId) => {
+    try {
+        const resp = await fetch(`${URL}/posts/${postId}`, {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+        })
+        const data = await resp.json()
+
+        console.log(data);
+
+    } catch (e) {
+        console.log(e)
+    }
+
+}
+
+export const editPost = async (postId, title, description, price, location = '[On Request]') => {
+    try {
+        const resp = await fetch(`${URL}posts/${postId}`, {
+            method: "PATCH",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify({
+                post: {
+                    title: `${title}`,
+                    description: `${description}`,
+                    price: `${price}`,
+                    location: `${location}`,
+                    willDeliver: true
+                }
+            })
+        })
+        const data = await resp.json()
+        console.log(data)
+        return data;
+
+    } catch (e) {
+        console.log(e)
+    }
+}

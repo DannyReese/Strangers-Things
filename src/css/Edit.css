@@ -1,0 +1,52 @@
+form{
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(23, 24, 25);
+    border-style: solid;
+    border-color: rgb(58, 58, 60);
+    border-width: 1px;
+    border-radius: 5px;
+   
+}
+
+
+
+#title{
+    
+    border-style: solid;
+    border-color: rgb(58, 58, 60);
+    border-width: 1px;
+    border-radius: 5px;
+    padding-left: .2em;
+    font-weight: 200;
+    font-size: large;
+    background-color: rgb(48, 48, 55);
+    color: aliceblue;
+}
+
+#description{
+    background-color: rgb(23, 24, 25);
+    border-style: none;
+    color:aliceblue;
+    border-style: none;
+}
+
+#price-loc{
+    padding: .5em;
+    background-color: rgb(28, 28, 51);
+    border-style: none;
+    color:aliceblue
+}
+#price{
+    background-color: rgb(28, 28, 51);
+    border-style: none;
+    color:aliceblue
+}
+
+#location{
+    background-color: rgb(28, 28, 51);
+    border-style: none;
+    color:aliceblue
+}
+

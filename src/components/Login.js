@@ -3,12 +3,13 @@ import { login } from "../Api.fetch"
 import { Link } from 'react-router-dom'
 import '../css/Login.css';
 
-const Login = ({ setToken }) => {
+const Login = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [message, setMessage] = useState(false)
     const [isMember, setIsMember] = useState(false)
-    const userToken = localStorage.getItem('token')
+
 
 
     return (
@@ -23,26 +24,23 @@ const Login = ({ setToken }) => {
                     <Link to='/create_account'>Sign-Up</Link>
                 </div>
             </div>
-            <form >
+            <form id='login-form' onSubmit={() => isMember ? null : setMessage(true)}>
                 <input id="input1" type='text' placeholder='username..' onChange={event => setUsername(event.target.value)}></input>
                 <input id='input2' type='password' placeholder='password..' onChange={event => setPassword(event.target.value)}></input>
-
                 <button id="button" onMouseOver={
                     async (event) => {
                         event.preventDefault()
                         try {
-
                             const resp = await login(username, password)
                             setIsMember(resp.success)
-                            setToken(userToken)
-
-
                         } catch (e) {
                             console.log('didnt work')
                         }
-                    }}>{isMember ? <Link to='/home'>Login</Link> : "Login"}</button>
-
+                    }}>{isMember ? <Link className='login-button' to='/home'>Login</Link> : "Login"}</button>
             </form>
+            <div>
+                {message ? <div id='incorrect-password'>Incorrect username or password</div> : null}
+            </div>
         </div>
     )
 }

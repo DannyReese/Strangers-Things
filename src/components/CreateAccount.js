@@ -17,7 +17,7 @@ const CreateAccount = () => {
                 <Link to="/">login</Link>
             </div>
         </div>
-        <form onSubmit={async (event) => {
+        <form className="login-form" onSubmit={async (event) => {
             event.preventDefault()
             try {
                 console.log(username)
@@ -28,8 +28,8 @@ const CreateAccount = () => {
                 console.log('didnt work')
             }
         }}>
-            <input placeholder='username..' onChange={event => setUsername(event.target.value)}></input>
-            <input placeholder='password..' onChange={event => setPassword(event.target.value)}></input>
+            <input className="input1" placeholder='username..' onChange={event => setUsername(event.target.value)}></input>
+            <input className='input2' placeholder='password..' onChange={event => setPassword(event.target.value)}></input>
             <button>Submit</button>
         </form>
     </div>

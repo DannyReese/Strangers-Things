@@ -5,8 +5,14 @@
     align-items: center;
     top: 0;
     background-color: rgb(28, 28, 51);
+    border-color: rgb(58, 58, 60);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
     margin-bottom: 1em;
     height: 9vh;
+    box-shadow: 0px 1px 10px rgb(48, 47, 47);
+
 }
 
 .lite{

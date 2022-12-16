@@ -1,10 +1,12 @@
-#input1{
+.input1{
     margin-left: .5em;
+    margin-bottom: .5em;
 }
-#input2{
+.input2{
     margin-left: .5em;
+    margin-bottom: .5em;
 }
-#button{
+.button{
     margin-left: .5em;
     border-style: solid;
     border-width: 1px;
@@ -12,4 +14,17 @@
  
 #sign-up-container{
     margin-right: 1em;
+}
+
+.login-button{
+    text-decoration: none;
+}
+
+#incorrect-password{
+    margin-left: .5em;
+    color: aliceblue;
+}
+
+#login-form{
+    width: 30vw;
 }
