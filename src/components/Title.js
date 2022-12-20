@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../css/Title.css'
 
-const Title = ({isLoggedIn,setIsLoggedIn}) => {
+const Title = () => {
 
     return (
         <div className="title">
@@ -9,14 +9,15 @@ const Title = ({isLoggedIn,setIsLoggedIn}) => {
                 <span className="cl">Craigs List</span>
                 <span className="lite">.lite</span>
             </div>
-         <div className='butt'>
+            <div className='butt'>
                 <Link className='link' to='/home'>Home</Link>
                 <Link className='link' to='/create_post'>Create Post</Link>
                 <Link className='link' to='/'>logout</Link>
-            
             </div>
         </div>
     )
 }
+
+
 
 export default Title

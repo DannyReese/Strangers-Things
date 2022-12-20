@@ -28,15 +28,43 @@ const CreatePost = ({ setChange }) => {
                 setLocation('')
             }
         }}>
-            <input className="item-input" value={title} placeholder="Item.." onChange={event => setTitle(event.target.value)}></input>
+            <input className="item-input"
+                value={title}
+                placeholder="Item.."
+                onChange={event => setTitle(event.target.value)}
+            >
+            </input>
+
             <br></br>
-            <textarea className="item-des" value={description} placeholder="Description.." onChange={event => setDescription(event.target.value)}></textarea>
+
+            <textarea className="item-des"
+                value={description}
+                placeholder="Description.."
+                onChange={event => setDescription(event.target.value)}
+            >
+            </textarea>
+
             <br></br>
-            <input className="item-price" value={price} placeholder="Price.." onChange={event => setPrice(`${event.target.value}`)}></input>
+
+            <input className="item-price"
+                value={price} placeholder="Price.."
+                onChange={event => setPrice(event.target.value)}
+            >
+            </input>
+
             <br></br>
-            <input className="item-price" value={location} placeholder="location.." onChange={event => setLocation(event.target.value)}></input>
+
+            <input className="item-price"
+                value={location}
+                placeholder="location.."
+                onChange={event => setLocation(event.target.value)}
+            >
+            </input>
+
             <br></br>
+
             <button>Submit</button>
+
         </form>
     </div>
     )

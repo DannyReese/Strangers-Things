@@ -28,3 +28,17 @@
 #login-form{
     width: 30vw;
 }
+
+.title{
+    width: 100vw;
+}
+
+.search-form{
+    color: aliceblue;
+    margin-left: .5em;
+   max-width: 50vw;
+   width: 50vw;
+}
+#search-input{
+    width: 50vw;
+}

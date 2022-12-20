@@ -1,4 +1,4 @@
-form{
+form {
     padding: .5em;
     display: flex;
     flex-direction: column;
@@ -7,13 +7,13 @@ form{
     border-color: rgb(58, 58, 60);
     border-width: 1px;
     border-radius: 5px;
-   
+
 }
 
 
 
-#title{
-    
+#title {
+
     border-style: solid;
     border-color: rgb(58, 58, 60);
     border-width: 1px;
@@ -25,28 +25,44 @@ form{
     color: aliceblue;
 }
 
-#description{
+#description {
     background-color: rgb(23, 24, 25);
+    height: 50%;
     border-style: none;
-    color:aliceblue;
+    color: aliceblue;
     border-style: none;
 }
 
-#price-loc{
+#price-loc {
     padding: .5em;
-    background-color: rgb(28, 28, 51);
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(14, 61, 61);
     border-style: none;
-    color:aliceblue
-}
-#price{
-    background-color: rgb(28, 28, 51);
-    border-style: none;
-    color:aliceblue
+    color: aliceblue;
+    margin-bottom: .5em;
 }
 
-#location{
-    background-color: rgb(28, 28, 51);
+#price {
+    background-color:rgb(14, 61, 61);
     border-style: none;
-    color:aliceblue
+    color: aliceblue
 }
 
+#location {
+    background-color:rgb(14, 61, 61);
+    border-style: none;
+    color: aliceblue
+}
+
+#edit-form {
+    height: 30vh;
+    max-height: 30vh;
+    margin-left: 1em;
+    width: 40vw;
+    max-width: 40vw;
+}
+
+#sub-button{
+    border-style: none;
+}

@@ -77,8 +77,8 @@ export const login = async (username, password) => {
         localStorage.setItem('token', data.data.token)
         return data;
     }
-    catch (error) {
-        console.log(error)
+    catch (e) {
+
     }
 }
 
@@ -132,7 +132,8 @@ export const editPost = async (postId, title, description, price, location = '[O
                     description: `${description}`,
                     price: `${price}`,
                     location: `${location}`,
-                    willDeliver: true
+                    willDeliver: true,
+                    active: false
                 }
             })
         })
@@ -142,5 +143,42 @@ export const editPost = async (postId, title, description, price, location = '[O
 
     } catch (e) {
         console.log(e)
+    }
+};
+
+export const search = async (string) => {
+    try {
+        const array = []
+        const inputArray = string.toLowerCase().split(' ')
+        const data = await fetchPosts()
+        data.data.posts.map(post => post.title.toLowerCase().split(' ').map(word => inputArray.includes(word) ? array.push(post) : null))
+        return array
+    } catch (e) {
+        console.log(e)
+
+    }
+
+}
+
+export const postMessage = async (id,message) => {
+    try {
+        const resp = await fetch(`${URL}/posts/${id}/messages`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify({
+                message: {
+                    content:`${message}`
+                }
+            })
+        })
+        const data = await resp.json()
+
+        console.log(data);
+
+    } catch (e) {
+
     }
 }

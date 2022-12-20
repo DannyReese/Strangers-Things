@@ -28,33 +28,16 @@ a{
     color: aliceblue;
 }
 
-.profile{
-    overflow-y: scroll;
-    height: 100vw;
-    max-height: 100vw;
-    padding-top: 1em;
-    padding-left: .5em;
-    padding-right: .5em;
-    background-color: rgb(23, 24, 25);
-    border-color: rgb(58, 58, 60);
-    border-width: 1px;
-    margin-left: 1em;
-    width:50vw;
-    box-shadow: 0px 1px 10px rgb(48, 47, 47);
-    border-style: solid;
-    border-radius: 5px;
-    color: aliceblue;
-}
-
-#header-div{
-    display: flex;
-    justify-content: space-between;
-}
-
 .home-container{
     display: flex;
 }
 
-.post-div{
-    margin-bottom: 1em;
+#message-page{
+    
+    display: flex;
+}
+
+#message-div{
+    margin-left: 1em;
+    width:40vw;
 }
