@@ -6,7 +6,7 @@ export const fetchPosts = async () => {
     const resp = await fetch(`${URL}posts`)
     const data = await resp.json()
     return data
-};
+}
 
 export const creatPost = async ({ title, description, price, location }) => {
     const resp = await fetch(`${URL}posts`, {
@@ -78,7 +78,7 @@ export const login = async (username, password) => {
         return data;
     }
     catch (e) {
-
+        console.log('hi')
     }
 }
 
@@ -150,6 +150,7 @@ export const search = async (string) => {
     try {
         const array = []
         const inputArray = string.toLowerCase().split(' ')
+        console.log(inputArray)
         const data = await fetchPosts()
         data.data.posts.map(post => post.title.toLowerCase().split(' ').map(word => inputArray.includes(word) ? array.push(post) : null))
         return array
@@ -160,7 +161,7 @@ export const search = async (string) => {
 
 }
 
-export const postMessage = async (id,message) => {
+export const postMessage = async (id, message) => {
     try {
         const resp = await fetch(`${URL}/posts/${id}/messages`, {
             method: "POST",
@@ -170,7 +171,7 @@ export const postMessage = async (id,message) => {
             },
             body: JSON.stringify({
                 message: {
-                    content:`${message}`
+                    content: `${message}`
                 }
             })
         })
@@ -182,3 +183,5 @@ export const postMessage = async (id,message) => {
 
     }
 }
+
+export const username = localStorage.getItem('user')

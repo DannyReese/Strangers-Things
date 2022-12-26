@@ -30,6 +30,7 @@ a{
 
 .home-container{
     display: flex;
+    justify-content: center;
 }
 
 #message-page{

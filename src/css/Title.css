@@ -4,14 +4,14 @@
     justify-content: space-between;
     align-items: center;
     top: 0;
-    background-color:rgb(14, 61, 61);
-    border-color: rgb(58, 58, 60);
-    border-style: solid;
+    background-color: rgb(72, 106, 38);
+ 
+    border-style: none;
     border-width: 1px;
     border-radius: 5px;
     margin-bottom: 1em;
     height: 9vh;
-    box-shadow: 0px 1px 10px rgb(48, 47, 47);
+ 
 
 }
 

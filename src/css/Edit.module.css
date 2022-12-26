@@ -12,20 +12,8 @@ form {
 
 
 
-#title {
 
-    border-style: solid;
-    border-color: rgb(58, 58, 60);
-    border-width: 1px;
-    border-radius: 5px;
-    padding-left: .2em;
-    font-weight: 200;
-    font-size: large;
-    background-color: rgb(48, 48, 55);
-    color: aliceblue;
-}
-
-#description {
+.description {
     background-color: rgb(23, 24, 25);
     height: 50%;
     border-style: none;
@@ -33,7 +21,7 @@ form {
     border-style: none;
 }
 
-#price-loc {
+.priceloc {
     padding: .5em;
     display: flex;
     justify-content: space-between;
@@ -43,19 +31,19 @@ form {
     margin-bottom: .5em;
 }
 
-#price {
+.price {
     background-color:rgb(14, 61, 61);
     border-style: none;
     color: aliceblue
 }
 
-#location {
+.location {
     background-color:rgb(14, 61, 61);
     border-style: none;
     color: aliceblue
 }
 
-#edit-form {
+.editform {
     height: 30vh;
     max-height: 30vh;
     margin-left: 1em;
@@ -63,6 +51,6 @@ form {
     max-width: 40vw;
 }
 
-#sub-button{
+.subbutton{
     border-style: none;
 }

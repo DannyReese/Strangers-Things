@@ -1,0 +1,36 @@
+#message-text{
+
+width: 38vw;
+}
+
+.message{
+    margin-bottom: 1em;
+ 
+    position: fixed;
+}
+
+
+
+
+.messageform{
+    background-color: rgb(72, 106, 38);
+    position: fixed;
+}
+
+.post{
+    color: aliceblue;
+    margin-bottom: 1em;
+    background-color: rgb(72, 106, 38);
+    border-radius: 7px;
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.priceuser{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+
+}

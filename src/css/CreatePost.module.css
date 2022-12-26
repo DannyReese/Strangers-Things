@@ -1,0 +1,56 @@
+.textdiv{
+    display: flex;
+    justify-content: center;
+}
+.createpost {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(72, 106, 38);
+    width: 30vw;
+    margin: none;
+    padding: none;
+  
+
+}
+
+.createpostcontainer {
+    position: fixed;
+    padding: none;
+    background-color: rgb(72, 106, 38);
+    border-style: none;
+    border-radius: 5px;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+
+}
+
+.itemdes {
+    background-color: rgb(48, 48, 55);
+    border-radius: 5px;
+    border-style: none;
+    color: aliceblue;
+    height: 20vh;
+    max-height: 20vh;
+}
+
+.iteminput {
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(48, 48, 55);
+    color: aliceblue;
+}
+
+.itemprice {
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(48, 48, 55);
+    color: aliceblue;
+}
+
+button {
+    border-radius: 5px;
+    background-color: rgb(57, 77, 38);
+    color: aliceblue;
+    border-style: none;
+}

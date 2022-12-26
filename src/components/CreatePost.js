@@ -1,8 +1,9 @@
 import { useState } from "react"
 import { creatPost } from '../Api.fetch'
-import '../css/CreatePost.css'
+import { Link } from "react-router-dom"
+import CreatePostCss from '../css/CreatePost.module.css'
 
-const CreatePost = ({ setChange }) => {
+const CreatePost = () => {
 
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
@@ -10,25 +11,11 @@ const CreatePost = ({ setChange }) => {
     const [location, setLocation] = useState('')
 
 
-    return (<div className="create-post-container">
+    return (<div id='page'>
+    <div className="create-post-container">
 
-        <form className="create-post" onSubmit={async (event) => {
-
-            event.preventDefault()
-            try {
-                const resp = await creatPost({ title, description, price, location })
-                setChange(resp.data.post._id)
-            } catch (e) {
-                console.log(e)
-
-            } finally {
-                setTitle('')
-                setDescription('')
-                setPrice('')
-                setLocation('')
-            }
-        }}>
-            <input className="item-input"
+        <form className={CreatePostCss.createpost} >
+            <input className={CreatePostCss.iteminput}
                 value={title}
                 placeholder="Item.."
                 onChange={event => setTitle(event.target.value)}
@@ -37,7 +24,7 @@ const CreatePost = ({ setChange }) => {
 
             <br></br>
 
-            <textarea className="item-des"
+            <textarea className={CreatePostCss.itemdes}
                 value={description}
                 placeholder="Description.."
                 onChange={event => setDescription(event.target.value)}
@@ -46,7 +33,7 @@ const CreatePost = ({ setChange }) => {
 
             <br></br>
 
-            <input className="item-price"
+            <input className={CreatePostCss.itemprice}
                 value={price} placeholder="Price.."
                 onChange={event => setPrice(event.target.value)}
             >
@@ -54,7 +41,7 @@ const CreatePost = ({ setChange }) => {
 
             <br></br>
 
-            <input className="item-price"
+            <input className={CreatePostCss.itemprice}
                 value={location}
                 placeholder="location.."
                 onChange={event => setLocation(event.target.value)}
@@ -63,9 +50,25 @@ const CreatePost = ({ setChange }) => {
 
             <br></br>
 
-            <button>Submit</button>
+            <Link to='/home'><button onMouseDown={async (event) => {
+
+                event.preventDefault()
+                try {
+                    await creatPost({ title, description, price, location })
+                   
+                } catch (e) {
+                    console.log(e)
+
+                } finally {
+                    setTitle('')
+                    setDescription('')
+                    setPrice('')
+                    setLocation('')
+                }
+            }}>Submit</button></Link>
 
         </form>
+    </div>
     </div>
     )
 }

@@ -1,0 +1,71 @@
+.searchdiv {
+    display: flex;
+}
+
+.postsearchdiv {
+    display: flex;
+   
+}
+
+.searchresults {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-width: 50vw;
+}
+
+.searchandresult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchinput {
+    width: 30vw;
+    max-width: 30vw;
+}
+
+.searchform {
+    color: aliceblue;
+    background-color: rgb(72, 106, 38);
+    max-width: 40vw;
+    width: 40vw;
+    margin-top: .5em;
+}
+
+.searchinput {
+  
+    margin-right: .5em;
+}
+
+.post{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .5em;
+    background-color: rgb(72, 106, 38);
+    border-radius: 7px;
+    width: 40vw;
+    height: 20%;
+}
+
+
+
+.description{
+margin: 1em;
+}
+
+.priceuser{
+    display: flex;
+    width:96%;
+   padding:.5em;
+    justify-content: space-between;
+    background-color: rgb(57, 77, 38);
+    margin-bottom: .5em;
+}
+
+.button{
+    background-color: rgb(57, 77, 38);
+    border-style: none;
+}

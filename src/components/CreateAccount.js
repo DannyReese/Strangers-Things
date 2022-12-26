@@ -25,12 +25,12 @@ const CreateAccount = () => {
         <form className="login-form" onSubmit={async (event) => {
             event.preventDefault()
             try {
-                console.log(username)
+
                 const resp = await creatAccount(username, password)
                 const data = await resp.json()
                 console.log(data)
             } catch (e) {
-                
+
             }
         }}>
             <input className="input1"

@@ -1,30 +1,35 @@
-import '../css/Message.css'
+import MessageCss from '../css/Message.module.css'
 import { useState } from 'react'
 import { postMessage } from '../Api.fetch'
+import { Link } from 'react-router-dom';
 
-const Message = ({ title, description, username, location, price, postId }) => {
+
+
+const Message = ({ title, description, othersUsername, location, price, postId }) => {
     const [message, setMessage] = useState('')
 
 
-    return (<div>
-        <div className="post" >
-            <div className="header">{title}</div>
-            <div className='description'>{description}</div>
-            <div className="price-user">
-                <div className="user">{username}</div>
-                <div>{location}</div>
-                <div className="price">{price}</div>
+    return (<form className={MessageCss.messageform}>
+    
+        <div className={MessageCss.post} >
+            <div className={MessageCss.header}>{title}</div>
+            <div className={MessageCss.description}>{description}</div>
+            <div className={MessageCss.priceuser}>
+                <div className={MessageCss.user}>{othersUsername}</div>
+                <div>{(location === '[On Request]' || !location) ? null :location}</div>
+                <div className={MessageCss.price}>{price}</div>
             </div>
         </div>
-        <form onSubmit={(event) => {
-            event.preventDefault()
-            postMessage(postId, message)
-            setMessage('')
-        }}>
+        
             <textarea value={message} id='message-text' onChange={event => { setMessage(event.target.value) }}></textarea>
-            <button>Submit</button>
+            <Link to="/home"><button onMouseDown={(event) => {
+                event.preventDefault()
+                postMessage(postId, message)
+                setMessage('')
+            }}>Submit</button></Link>
+           
         </form>
-    </div>
+   
     )
 }
 

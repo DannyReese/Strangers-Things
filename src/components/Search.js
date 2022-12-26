@@ -1,15 +1,13 @@
 import { search } from "../Api.fetch"
 import { useState } from 'react'
-import Post from "./Post"
-import { Link } from "react-router-dom"
-import Login from "./Login"
-import '../css/Search.css'
+import SearchCss from '../css/Search.module.css'
 
 
-const Search = () => {
+export const Search = () => {
     const [searchValue, setSearchValue] = useState('')
     const [result, setResul] = useState('')
 
+    console.log(searchValue)
 
     const searchResult = async () => {
         const resp = await search(searchValue)
@@ -18,63 +16,41 @@ const Search = () => {
 
     }
 
-    return (
-        <div>
-        
-        <div className="title">
+    return (<div className={SearchCss.searchandresult}>
 
-<div>
-    <span className="cl">Craigs List</span>
-    <span className="lite">.lite</span>
-</div>
+        <form className={SearchCss.searchform} onSubmit={(event) => {
+            event.preventDefault()
+            searchResult()
 
-<div id="sign-up-container">
-    <Link to='/create_account'>Sign-Up</Link>
-</div>
-
-</div>
-    <div id='post-search-div'>
-        <div>
-        <Login/>
-        <Post />
-        </div>
-
-           
-        <div id='search-and-result'>
-       
-            <form className='search-form' onSubmit={(event) => {
-                event.preventDefault()
-                searchResult()
-
-            }}>
-                <label>Search</label>
-                <div>
-                    <input value={searchValue} id='search-input' onChange={event => setSearchValue(event.target.value)}></input>
-                    <button>Search</button>
-                </div>
-            </form>
-
-            <div id='search-results'>
-                {
-                    result ? result.map(post => {
-                        return (
-                            <div className="post" key={post._id} >
-                                <div className="header">{post.title}</div>
-                                <div className='description'>{post.description}</div>
-                                <div className="price-user">
-                                    <div className="user">{post.author.username}</div>
-                                    <div>{(post.location === '[On Request]' || !post.location) ? null : post.location}</div>
-                                    <div className="price">{post.price}</div>
-
-                                </div>
-                            </div>)
-                    }) : null
-                }
+        }}>
+            <label>Search</label>
+            <div>
+                <input value={searchValue} className={SearchCss.searchinput} onChange={event => setSearchValue(event.target.value)}></input>
+                <button className={SearchCss.button}>Search</button>
             </div>
+        </form>
+
+        <div id='search-results'>
+            {
+                result ? result.map(post => {
+                    return (
+                        <div className={SearchCss.post} key={post._id} >
+                            <div className={SearchCss.header}>{post.title}</div>
+                            <div className={SearchCss.description}>{post.description}</div>
+                            <div className={SearchCss.priceuser}>
+                                <div className={SearchCss.user}>{post.author.username}</div>
+                                <div className={SearchCss.location}>{(post.location === '[On Request]' || !post.location) ? null : post.location}</div>
+                                <div className={SearchCss.price}>{post.price}</div>
+
+                            </div>
+                        </div>)
+                }) : null
+            }
         </div>
     </div>
-    </div>
+
     )
+
 }
 
 export default Search

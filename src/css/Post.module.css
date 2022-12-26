@@ -1,0 +1,83 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    overflow-y: scroll;
+    border-style: none;
+    border-width: 1px;
+    border-radius: 5px;
+    padding-left: .5em;
+    padding-right: .5em;
+    width: 60vw;
+    max-width: 60vw;
+    height: 100vw;
+    max-height: 100vw;
+}
+
+
+
+.post {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .5em;
+    background-color: rgb(72, 106, 38);
+    border-radius: 7px;
+    width: 95%;
+ 
+    margin-bottom: 1em;
+}
+
+
+.header {
+
+    display: flex;
+    justify-content: center;
+    border-width: 1px;
+    border-radius: 5px;
+    padding-left: .2em;
+    font-weight: 200;
+    font-size: large;
+    background-color: rgb(72, 106, 38);
+    color: aliceblue;
+}
+
+
+
+.priceuser {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+    background-color: rgb(57, 77, 38);
+    border-radius: 7px;
+    margin: 1em;
+    width: 95%;
+}
+
+.user {
+    display: flex;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.description {
+    display: flex;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+  
+    font-weight: lighter;
+    padding: .5em;
+}
+
+.price{
+    display: flex;
+}
+ 
+
+.location{
+    display: flex;
+}
+

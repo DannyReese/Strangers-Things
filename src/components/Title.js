@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../css/Title.css'
 
-const Title = () => {
+export const Title = () => {
 
     return (
         <div className="title">
@@ -11,6 +11,7 @@ const Title = () => {
             </div>
             <div className='butt'>
                 <Link className='link' to='/home'>Home</Link>
+                <Link className='link' to='/welcome'>Profile</Link>
                 <Link className='link' to='/create_post'>Create Post</Link>
                 <Link className='link' to='/'>logout</Link>
             </div>
@@ -19,5 +20,5 @@ const Title = () => {
 }
 
 
-
 export default Title
+

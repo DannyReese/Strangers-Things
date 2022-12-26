@@ -1,11 +1,12 @@
 import { editPost } from "../Api.fetch";
-import '../css/Edit.css'
+import { Link } from "react-router-dom";
+import EditCss from '../css/Edit.module.css'
 
-const Edit = ({ setChange, postId, title, description, price, location, setTitle, setDescription, setPrice, setLocation }) => {
+export const Edit = ({ postId, setChange, title, description, price, location, setTitle, setDescription, setPrice, setLocation }) => {
 
     return (<div>
-        <form id='edit-form'>
-            <input id='title'
+        <form className={EditCss.editform}>
+            <input className={EditCss.title}
                 value={title}
                 placeholder="item"
                 type='text'
@@ -14,7 +15,7 @@ const Edit = ({ setChange, postId, title, description, price, location, setTitle
             </input>
 
 
-            <textarea id='description'
+            <textarea className={EditCss.description}
                 value={description}
                 placeholder='descripton'
                 type='text'
@@ -24,7 +25,7 @@ const Edit = ({ setChange, postId, title, description, price, location, setTitle
 
             <div id='price-loc'>
 
-                <input id='location'
+                <input className={EditCss.location}
                     value={location}
                     placeholder="location"
                     type='text'
@@ -32,7 +33,7 @@ const Edit = ({ setChange, postId, title, description, price, location, setTitle
                 >
                 </input>
 
-                <input id='price'
+                <input className={EditCss.price}
                     value={price}
                     placeholder='price'
                     type='text'
@@ -42,14 +43,15 @@ const Edit = ({ setChange, postId, title, description, price, location, setTitle
 
             </div>
 
-            <button id='sub-button' onMouseDown={() => {
-                editPost(postId,
+            <Link to='/welcome'><button className={EditCss.subbutton} onMouseDown={() => {
+                editPost(
+                    postId,
                     title,
                     description,
                     price,
                     location
-                ).then(setChange(Math.random()*1))
-            }}>Submit Changes</button>
+                ).then(setChange(Math.random() * 1))
+            }}>Submit Changes</button></Link>
         </form>
     </div>
     )

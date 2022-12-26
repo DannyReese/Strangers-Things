@@ -1,0 +1,68 @@
+a{
+    text-decoration: none;
+}
+
+.othersposts{
+    
+        overflow-y: scroll;
+        height: 100vw;
+        max-height: 100vw;
+        padding-top: 1em;
+        padding-left: .5em;
+        padding-right: .5em;
+        background-color: rgb(26, 38, 34);
+        border-width: 1px;
+        margin-left: 1em;
+        width: 60vw;
+      
+      
+        border-radius: 5px;
+        color: aliceblue;
+    }
+
+    .otherspost{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 7px;
+        background-color: rgb(72, 106, 38);
+        margin-bottom: 1em;
+        height: 30vh;
+    }
+
+    .otherspost:hover{
+        background-color: rgb(57, 77, 38);
+    }
+.header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.priceuser{
+display: flex;
+justify-content: space-between;
+height: 25%;
+background-color: rgb(57, 77, 38);
+margin-bottom: .5em;
+margin-left: .5em;
+margin-right: .5em;
+border-radius: 7px;
+align-items: center;
+}
+
+.description{
+    padding-left: .5em;
+    background-color: rgb(72, 106, 38);
+    border-radius: 7px;
+    margin: .5em;
+}
+  
+.messagelink{
+
+ margin-right: 1em;
+}
+.headerdiv{
+    display: flex;
+
+}

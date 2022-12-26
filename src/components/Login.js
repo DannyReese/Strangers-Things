@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { login } from "../Api.fetch"
 import { Link } from 'react-router-dom'
-import '../css/Login.css';
+import LoginCss from '../css/Login.module.css';
 
 
-const Login = () => {
+export const Login = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -17,24 +17,24 @@ const Login = () => {
 
         <div>
 
-           
-            <form id='login-form' onSubmit={() => isMember ? null : setMessage(true)}>
 
-                <input id="input1"
+            <form className={LoginCss.loginform} onSubmit={() => isMember ? null : setMessage(true)}>
+
+                <input className={LoginCss.input1}
                     type='text'
                     placeholder='username..'
-                    onChange={event => setUsername(event.target.value)}
+                    onChange={event=>setUsername(event.target.value)}
                 >
                 </input>
 
-                <input id='input2'
+                <input className={LoginCss.input2}
                     type='password'
                     placeholder='password..'
-                    onChange={event => setPassword(event.target.value)}
+                    onChange={event=>setPassword(event.target.value)}
                 >
                 </input>
 
-                <div id="button"
+                <div className={LoginCss.buttondiv}
                     onMouseOver={
                         async (event) => {
                             event.preventDefault()
@@ -42,19 +42,19 @@ const Login = () => {
                                 const resp = await login(username, password)
                                 setIsMember(resp.success)
                             } catch (e) {
-                              
+
                             }
                         }}>
-                    {isMember ? <Link className='login-button' to='/home'><button>Login</button></Link> : <button>Login</button>}
+                    {isMember ? <Link className={LoginCss.loginbutton} to='/welcome'><button className={LoginCss.button}>Login</button></Link> : <button className={LoginCss.button}>Login</button>}
                 </div>
                 <div>
-                {message ? <div id='incorrect-password'>Incorrect username or password</div> : null}
-            </div>
+                    {message ? <div id='incorrect-password'>Incorrect username or password</div> : null}
+                </div>
             </form>
 
-         
-</div>
-        
+
+        </div>
+
     )
 }
 export default Login

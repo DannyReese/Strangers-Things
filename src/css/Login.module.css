@@ -1,0 +1,38 @@
+.input1 {
+    margin-left: .5em;
+    margin-bottom: .5em;
+}
+
+.input2 {
+    margin-left: .5em;
+    margin-bottom: .5em;
+}
+
+
+
+.loginbutton {
+    background-color: rgb(57, 77, 38);
+    text-decoration: none;
+    border-style: none;
+    border-radius: 7px;
+   
+}
+
+.incorrectpassword {
+    margin-left: .5em;
+    color: aliceblue;
+}
+
+.loginform {
+    color: aliceblue;
+    background-color: rgb(72, 106, 38);
+    width: 40vw;
+    border-style: none;
+
+}
+
+.button{
+    background-color: rgb(57, 77, 38);
+    border-style: none;
+    border-radius: 7px;
+}
