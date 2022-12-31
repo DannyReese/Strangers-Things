@@ -10,7 +10,7 @@ import { useEffect, useState } from "react"
 export const Post = () => {
 
     const [posts, setPosts] = useState([])
-    const { data } = posts
+  
 
 
     console.log(posts)
@@ -19,14 +19,16 @@ export const Post = () => {
 
     const getPosts = async () => {
         const results = await fetchPosts()
-        setPosts(results)
+        const data = results.data.posts.reverse()
+     
+        setPosts(data)
     }
     
     useEffect(() => {getPosts()}, [])
     return (
         <aside className={PostCss.posts}>
             {
-                data ? data.posts.map(post => {
+                posts ? posts.map(post => {
                     return (
 
                         <div className={PostCss.post} key={post._id} >

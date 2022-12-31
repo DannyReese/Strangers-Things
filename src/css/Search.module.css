@@ -1,23 +1,19 @@
-.searchdiv {
-    display: flex;
-}
 
-.postsearchdiv {
-    display: flex;
-   
-}
 
 .searchresults {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 50vw;
     max-width: 50vw;
+    height: 100vw;
+    overflow-y: scroll;
 }
 
 .searchandresult {
     display: flex;
     flex-direction: column;
-    align-items: center;
+   align-items: center;
 }
 
 .searchinput {
@@ -27,16 +23,13 @@
 
 .searchform {
     color: aliceblue;
-    background-color: rgb(72, 106, 38);
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4),  rgb(100, 170, 30));
     max-width: 40vw;
     width: 40vw;
     margin-top: .5em;
 }
 
-.searchinput {
-  
-    margin-right: .5em;
-}
+
 
 .post{
     color: aliceblue;
@@ -44,10 +37,11 @@
     flex-direction: column;
     align-items: center;
     margin-top: .5em;
-    background-color: rgb(72, 106, 38);
+    /* border-style: solid; */
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4),  rgb(100, 170, 30));
     border-radius: 7px;
     width: 40vw;
-    height: 20%;
+   
 }
 
 
@@ -60,9 +54,12 @@ margin: 1em;
     display: flex;
     width:96%;
    padding:.5em;
+ 
     justify-content: space-between;
-    background-color: rgb(57, 77, 38);
+    /* background-color: rgb(57, 77, 38); */
+    background-image: linear-gradient(to bottom right,  rgb(100, 170, 30),rgb(4, 24, 4));
     margin-bottom: .5em;
+    border-radius: 7px;
 }
 
 .button{

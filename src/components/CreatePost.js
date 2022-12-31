@@ -12,7 +12,7 @@ const CreatePost = () => {
 
 
     return (<div id='page'>
-    <div className="create-post-container">
+    <div className={CreatePostCss.createpostcontainer}>
 
         <form className={CreatePostCss.createpost} >
             <input className={CreatePostCss.iteminput}
@@ -50,7 +50,7 @@ const CreatePost = () => {
 
             <br></br>
 
-            <Link to='/home'><button onMouseDown={async (event) => {
+            <Link to='/home' onMouseDown={async (event) => {
 
                 event.preventDefault()
                 try {
@@ -65,7 +65,7 @@ const CreatePost = () => {
                     setPrice('')
                     setLocation('')
                 }
-            }}>Submit</button></Link>
+            }}>Submit</Link>
 
         </form>
     </div>

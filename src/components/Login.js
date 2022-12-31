@@ -45,7 +45,7 @@ export const Login = () => {
 
                             }
                         }}>
-                    {isMember ? <Link className={LoginCss.loginbutton} to='/welcome'><button className={LoginCss.button}>Login</button></Link> : <button className={LoginCss.button}>Login</button>}
+                    {isMember ? <Link className={LoginCss.loginbutton} to='/welcome'>Login</Link> : <Link className={LoginCss.loginbutton} onClick={()=>setMessage(true)} to='/'>Login</Link>}
                 </div>
                 <div>
                     {message ? <div id='incorrect-password'>Incorrect username or password</div> : null}

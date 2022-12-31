@@ -16,9 +16,15 @@
     margin-left: .5em;
     border-style: solid;
     border-width: 1px;
+    background-color: rgb(100, 170, 30);
 }
 
 
 .login-form {
     width: 30vw;
+}
+
+.body{
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, rgb(13, 13, 13), rgb(53, 53, 46));
 }

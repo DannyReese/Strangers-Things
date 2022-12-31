@@ -43,15 +43,15 @@ export const Edit = ({ postId, setChange, title, description, price, location, s
 
             </div>
 
-            <Link to='/welcome'><button className={EditCss.subbutton} onMouseDown={() => {
+            <Link to='/welcome' onMouseDown={() => {
                 editPost(
                     postId,
                     title,
                     description,
                     price,
                     location
-                ).then(setChange(Math.random() * 1))
-            }}>Submit Changes</button></Link>
+                )
+            }}> Submit Changes</Link>
         </form>
     </div>
     )

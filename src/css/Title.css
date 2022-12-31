@@ -4,12 +4,12 @@
     justify-content: space-between;
     align-items: center;
     top: 0;
-    background-color: rgb(72, 106, 38);
- 
+    /* background-image: linear-gradient(to bottom, rgb(4, 24, 4), rgb(48, 48, 3)); */
+    width: 100vw;
     border-style: none;
     border-width: 1px;
     border-radius: 5px;
-    margin-bottom: 1em;
+  
     height: 9vh;
  
 
@@ -20,5 +20,18 @@
 }
 
 .link{
+    display: flex;
     margin-left: 1em;
+    margin-right: 1em;
+}
+
+.butt{
+    display: flex;
+}
+
+.craigslist{
+    margin-left: .5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }

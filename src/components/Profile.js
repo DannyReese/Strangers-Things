@@ -6,27 +6,31 @@ import ProfileCss from "../css/Profile.module.css"
 
 
 
-const Profile = ({ change, setLocation, setPostId, setTitle, setPrice, setDescription }) => {
+const Profile = ({ setLocation, setPostId, setTitle, setPrice, setDescription }) => {
 
     const [userPosts, setUserPosts] = useState([])
+    const [posts, setPosts] = useState([])
 
     const { data } = userPosts
 
     const getPosts = async () => {
         const results = await profile()
+        const data = results.data.posts.reverse()
+        console.log(data)
+        setPosts(data)
         setUserPosts(results)
     }
 
-    useEffect(() => { getPosts() }, [change])
+    useEffect(() => { getPosts() }, [])
 
 
     return (<div className={ProfileCss.profile}>
 
         {data ? <Link to='/users-messages'><button className={ProfileCss.messages}>messages</button></Link> : null}
 
-        {data ? <div><h2>Welcome: {data.username}</h2></div> : null}
+        {data ? <div><h1><b>Welcome: {data.username}</b></h1></div> : null}
 
-        {data ? data.posts.map(post => {
+        {data ? posts.map(post => {
 
             return (
 
@@ -43,8 +47,8 @@ const Profile = ({ change, setLocation, setPostId, setTitle, setPrice, setDescri
                         <div className={post.active ? ProfileCss.actived : null}>
                             <div></div>
                         </div>
-                        <div className={ProfileCss.header}><h3>{post.title}</h3></div>
-                        <Link to='/edit'>edit</Link>
+                        <div className={ProfileCss.header}><h3>{post.title.toUpperCase()}</h3></div>
+                        <Link to='/edit' className={ProfileCss.edit}>edit</Link>
                     </div>
                     <div className={ProfileCss.description}>{post.description}</div>
                     <div className={ProfileCss.priceuser}>

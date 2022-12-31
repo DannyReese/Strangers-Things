@@ -1,0 +1,28 @@
+.signup{
+    margin-right: 1em;
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
+}
+
+.cl{
+    color: aliceblue;
+}
+
+.lite{
+    color: rgb(17, 224, 62);
+}
+
+.cllite{
+    display: flex;
+    align-items:center
+}

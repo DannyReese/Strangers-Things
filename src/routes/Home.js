@@ -4,6 +4,7 @@ import HomeCss from '../css/Home.module.css'
 
 
 const Home = ({
+  
     setOthersUsername,
     setLocation,
     setTitle,
@@ -17,6 +18,7 @@ const Home = ({
         <Title />
         <div className={HomeCss.homecontainer}>
             {<OtherUserPosts
+              
                 setOthersUsername={setOthersUsername}
                 setLocation={setLocation}
                 setTitle={setTitle}

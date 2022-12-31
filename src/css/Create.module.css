@@ -1,3 +1,9 @@
 .createposts{
     display: flex;
 }
+
+.createpostcontainer{
+  
+    background-image: linear-gradient(to bottom , rgb(13, 13, 13), rgb(16, 62, 10));
+
+}

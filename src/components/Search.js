@@ -1,36 +1,48 @@
-import { search } from "../Api.fetch"
-import { useState } from 'react'
+import { fetchPosts } from "../Api.fetch"
+import { useEffect, useState } from 'react'
 import SearchCss from '../css/Search.module.css'
+
 
 
 export const Search = () => {
     const [searchValue, setSearchValue] = useState('')
     const [result, setResul] = useState('')
 
-    console.log(searchValue)
 
-    const searchResult = async () => {
-        const resp = await search(searchValue)
-        console.log(resp)
-        setResul(resp)
-
+    // console.log(searchValue)
+    useEffect(() => {
+        async function search() {
+            const resp = await fetchPosts()
+            const searchFilter = resp.data.posts.filter((p) => {
+                return (
+                    p.title.toLowerCase().includes(searchValue) ||
+                    p.description.toLowerCase().includes(searchValue) ||
+                    p.location.toLowerCase().includes(searchValue))
+            })
+            setResul(searchFilter)
+        }
+        search()
     }
+        , [searchValue])
 
     return (<div className={SearchCss.searchandresult}>
 
         <form className={SearchCss.searchform} onSubmit={(event) => {
             event.preventDefault()
-            searchResult()
+
 
         }}>
-            <label>Search</label>
+        
             <div>
+                <span class="material-symbols-outlined">
+                    search
+                </span>
                 <input value={searchValue} className={SearchCss.searchinput} onChange={event => setSearchValue(event.target.value)}></input>
-                <button className={SearchCss.button}>Search</button>
+
             </div>
         </form>
 
-        <div id='search-results'>
+        <div className={SearchCss.searchresults}>
             {
                 result ? result.map(post => {
                     return (

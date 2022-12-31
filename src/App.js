@@ -1,5 +1,5 @@
 
-import './css/App.module.css';
+import AppCss from './css/App.module.css';
 import React from 'react';
 import { useState } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
@@ -23,8 +23,8 @@ const App = () => {
   const [change, setChange] = useState('')
   const [username, setUsername] = useState('')
   const [othersUsername ,setOthersUsername] = useState('')
-
-  return (
+  
+  return (<div className={AppCss.container}>
     <HashRouter>
       <Switch>
 
@@ -48,6 +48,10 @@ const App = () => {
         <Route path='/home'>
           
             {<Home
+             
+           
+              othersUsername={othersUsername}
+              setOthersUsername={setOthersUsername}
               setLocation={setLocation}
               setTitle={setTitle}
               setPrice={setPrice}
@@ -60,6 +64,7 @@ const App = () => {
         <Route path="/message">
           <>
             {<MessagePage
+           
               othersUsername={othersUsername}
               setOthersUsername={setOthersUsername}
               setLocation={setLocation}
@@ -114,7 +119,7 @@ const App = () => {
 
       </Switch>
     </HashRouter>
-  )
+    </div>)
 }
 export default App;
 

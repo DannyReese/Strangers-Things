@@ -7,7 +7,7 @@ const CreateAccount = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
-    return (<div>
+    return (<div className="body">
 
         <div className="title">
 
@@ -45,7 +45,7 @@ const CreateAccount = () => {
             >
             </input>
 
-            <button>Submit</button>
+            <button className="button">Submit</button>
 
         </form>
 

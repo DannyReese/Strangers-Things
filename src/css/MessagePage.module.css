@@ -1,3 +1,13 @@
 .messagepage{
     display: flex;
+    background-image: linear-gradient(to bottom , rgb(13, 13, 13), rgb(16, 62, 10));
+
+}
+
+.page{
+    width: 100vw;
+}
+
+.posts{
+    width: 60%;
 }

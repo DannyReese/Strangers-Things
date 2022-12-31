@@ -5,10 +5,11 @@
 .createpost {
     display: flex;
     flex-direction: column;
-    background-color: rgb(72, 106, 38);
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(48, 48, 3));
     width: 30vw;
     margin: none;
     padding: none;
+    border: none;
   
 
 }
@@ -16,17 +17,15 @@
 .createpostcontainer {
     position: fixed;
     padding: none;
-    background-color: rgb(72, 106, 38);
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(48, 48, 3));
     border-style: none;
     border-radius: 5px;
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+  
 
 }
 
 .itemdes {
-    background-color: rgb(48, 48, 55);
+    background-image: linear-gradient(to bottom right, rgb(70, 93, 70), rgb(6, 16, 8));
     border-radius: 5px;
     border-style: none;
     color: aliceblue;
@@ -37,14 +36,14 @@
 .iteminput {
     border-radius: 5px;
     border-style: none;
-    background-color: rgb(48, 48, 55);
+    background-image: linear-gradient(to bottom right, rgb(70, 93, 70), rgb(6, 16, 8));
     color: aliceblue;
 }
 
 .itemprice {
     border-radius: 5px;
     border-style: none;
-    background-color: rgb(48, 48, 55);
+    background-image: linear-gradient(to bottom right, rgb(70, 93, 70), rgb(6, 16, 8));
     color: aliceblue;
 }
 
@@ -53,4 +52,12 @@ button {
     background-color: rgb(57, 77, 38);
     color: aliceblue;
     border-style: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+textarea:focus{
+    outline: none;
 }

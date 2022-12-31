@@ -2,7 +2,13 @@
 *{
     font-family: 'Oxygen', sans-serif;;
 }
+ body{
 
+    margin: 0;
+    background-image: linear-gradient(to bottom right, rgb(13, 13, 13), rgb(53, 53, 46));
+
+}
+/*
 .butt{
     margin-right: 1em;
 }
@@ -22,23 +28,13 @@
     width: 60vw;
     display: flex;
     
-}
+} */
 
-a{
+ .container{
+ margin: 0;
+ background-image: linear-gradient(to bottom , rgb(13, 13, 13), rgb(16, 62, 10));
+ }
+
+ a{
     color: aliceblue;
-}
-
-.home-container{
-    display: flex;
-    justify-content: center;
-}
-
-#message-page{
-    
-    display: flex;
-}
-
-#message-div{
-    margin-left: 1em;
-    width:40vw;
-}
+ }

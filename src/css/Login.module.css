@@ -11,10 +11,13 @@
 
 
 .loginbutton {
-    background-color: rgb(57, 77, 38);
+    background-color: rgb(100, 170, 30);
     text-decoration: none;
     border-style: none;
     border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    margin-left: .5em;
    
 }
 
@@ -24,15 +27,17 @@
 }
 
 .loginform {
+    margin-top: 1em;
     color: aliceblue;
-    background-color: rgb(72, 106, 38);
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4),  rgb(100, 170, 30));
     width: 40vw;
     border-style: none;
 
 }
 
-.button{
-    background-color: rgb(57, 77, 38);
-    border-style: none;
-    border-radius: 7px;
+
+
+.buttondiv{
+    display: flex;
+    justify-content: flex-start;
 }

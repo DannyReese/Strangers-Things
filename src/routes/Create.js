@@ -6,7 +6,7 @@ import CreateCss from "../css/Create.module.css"
 
 
 const Create = () => {
-    return (<>
+    return (<div className={CreateCss.createpostcontainer}>
         {<Title />}
         <div className={CreateCss.createposts}>
             {<Post />}
@@ -14,7 +14,7 @@ const Create = () => {
                 {<CreatePost  />}
             </div>
         </div>
-    </>
+    </div>
     )
 }
 

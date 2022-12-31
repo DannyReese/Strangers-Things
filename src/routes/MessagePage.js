@@ -22,11 +22,11 @@ const MessagePage = ({
 
 
     return (
-        <>
+        <div className={MessagePageCss.page}>
             <Title />
             <div className={MessagePageCss.messagepage}>
 
-                <div>
+                <div className={MessagePageCss.posts}>
                     <OtherUserPosts
                         setOthersUsername={setOthersUsername}
                         setLocation={setLocation}
@@ -49,7 +49,7 @@ const MessagePage = ({
                     />
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 export default MessagePage

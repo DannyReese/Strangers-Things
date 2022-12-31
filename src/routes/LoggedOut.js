@@ -6,17 +6,19 @@ import LoggedOutCss from '../css/LoggedOut.module.css'
 const LoggedOut = () => {
 
     return (
-        <>
+        <div className={LoggedOutCss.Page}>
             <LoggedOutNav />
             <div className={LoggedOutCss.homecontainer}>
-                <div>
+                <div className={LoggedOutCss.loginsearch}>
                     <Login />
                     <Search  />
                 </div>
+                <div className={LoggedOutCss.post}>
                <Post />
+               </div>
             </div>
 
-        </>
+        </div>
     )
 }
 

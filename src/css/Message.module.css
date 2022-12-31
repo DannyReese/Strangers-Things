@@ -1,6 +1,9 @@
-#message-text{
-
+.messagetext{
+background-color: black;
 width: 38vw;
+color: rgb(7, 242, 26);
+border-style: none;
+margin-bottom: .5em;
 }
 
 .message{
@@ -13,16 +16,19 @@ width: 38vw;
 
 
 .messageform{
-    background-color: rgb(72, 106, 38);
+    display: flex;
+    border: none;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(48, 48, 3));
     position: fixed;
+    margin-right: 1em;
 }
 
 .post{
     color: aliceblue;
     margin-bottom: 1em;
-    background-color: rgb(72, 106, 38);
     border-radius: 7px;
-    width: 35vw;
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -32,5 +38,8 @@ width: 38vw;
     display: flex;
     justify-content: space-between;
     width:100%;
+    padding: .5em;
+    border-radius: 7px;
+    background-image: linear-gradient(to bottom right,  rgb(100, 170, 30),rgb(4, 24, 4));
 
 }

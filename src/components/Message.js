@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Message = ({ title, description, othersUsername, location, price, postId }) => {
+const Message = ({ setIsOnMessagePage,title, description, othersUsername, location, price, postId }) => {
     const [message, setMessage] = useState('')
 
 
@@ -21,12 +21,13 @@ const Message = ({ title, description, othersUsername, location, price, postId }
             </div>
         </div>
         
-            <textarea value={message} id='message-text' onChange={event => { setMessage(event.target.value) }}></textarea>
-            <Link to="/home"><button onMouseDown={(event) => {
+            <textarea value={message} className={MessageCss.messagetext} onChange={event => { setMessage(event.target.value) }}></textarea>
+            <Link to="/home" onMouseDown={(event) => {
                 event.preventDefault()
                 postMessage(postId, message)
-                setMessage('')
-            }}>Submit</button></Link>
+               
+                setMessage('')}
+            } >Submit</Link>
            
         </form>
    
