@@ -2,7 +2,7 @@ import { editPost,deletePost } from "../Api.fetch";
 import { Link } from "react-router-dom";
 import EditCss from '../css/Edit.module.css'
 
-export const Edit = ({ postId, title, description, price, location, setTitle, setDescription, setPrice, setLocation }) => {
+export const Edit = ({setChange, postId, title, description, price, location, setTitle, setDescription, setPrice, setLocation }) => {
 
     return (<div>
         <form className={EditCss.editform}>
@@ -12,7 +12,7 @@ export const Edit = ({ postId, title, description, price, location, setTitle, se
                 type='text'
                 onChange={(event) => setTitle(event.target.value)}
             >
-            </input>
+            </input> 
 
 
             <textarea className={EditCss.description}
@@ -23,7 +23,7 @@ export const Edit = ({ postId, title, description, price, location, setTitle, se
             >
             </textarea>
 
-            <div id='price-loc'>
+            <div className={EditCss.priceloc}>
 
                 <input className={EditCss.location}
                     value={location}
@@ -42,7 +42,7 @@ export const Edit = ({ postId, title, description, price, location, setTitle, se
                 </input>
 
             </div>
-
+            <div className={EditCss.links}>
             <Link to='/welcome' onMouseDown={() => {
                 editPost(
                     postId,
@@ -50,12 +50,14 @@ export const Edit = ({ postId, title, description, price, location, setTitle, se
                     description,
                     price,
                     location
-                )
+                ) 
+                setChange(Math.random()*1)
             }}> Submit Changes</Link>
 
             <Link to='/welcome' onMouseDown={()=>{
                 deletePost(postId)
             }}>Delete</Link>
+            </div>
         </form>
     </div>
     )

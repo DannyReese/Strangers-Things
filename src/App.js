@@ -1,5 +1,5 @@
 
-import AppCss from './css/App.module.css';
+
 import React from 'react';
 import { useState } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
@@ -12,6 +12,7 @@ import MessagePage from './routes/MessagePage';
 import UserMessages from './routes/UserMessages';
 import Home from './routes/Home';
 import Create from './routes/Create';
+import SentMessages from './routes/SentMessages';
 
 const App = () => {
 
@@ -24,26 +25,27 @@ const App = () => {
   const [username, setUsername] = useState('')
   const [othersUsername, setOthersUsername] = useState('')
 
-  return (<div className={AppCss.container}>
+
+  return (<div >
     <HashRouter>
       <Switch>
 
         <Route exact path='/'>
           <LoggedOut />
-         </Route>
+        </Route>
 
         <Route path='/welcome'>
-          
-            {<Welcome
-              change={change}
-              setUsername={setUsername}
-              setLocation={setLocation}
-              setTitle={setTitle}
-              setPrice={setPrice}
-              setDescription={setDescription}
-              setPostId={setPostId} />}
-        
-         </Route>
+
+          {<Welcome
+            change={change}
+            setUsername={setUsername}
+            setLocation={setLocation}
+            setTitle={setTitle}
+            setPrice={setPrice}
+            setDescription={setDescription}
+            setPostId={setPostId} />}
+
+        </Route>
 
         <Route path='/home'>
 
@@ -60,59 +62,55 @@ const App = () => {
         </Route>
 
         <Route path="/message">
-          
-            {<MessagePage
 
-              othersUsername={othersUsername}
-              setOthersUsername={setOthersUsername}
-              setLocation={setLocation}
-              setTitle={setTitle}
-              setPrice={setPrice}
-              setDescription={setDescription}
-              setPostId={setPostId}
-              username={username}
-              title={title}
-              location={location}
-              price={price}
-              description={description}
-              postId={postId}
-            />}
+          {<MessagePage
+            othersUsername={othersUsername}
+            title={title}
+            location={location}
+            price={price}
+            description={description}
+            postId={postId}
+          />}
 
         </Route>
 
         <Route path='/users-messages'>
-          
-            {<UserMessages username={username} />}
-          
+
+          {<UserMessages username={username} />}
+
+        </Route>
+
+        <Route path='/sent-messages'>
+          {<SentMessages username={username} />}
         </Route>
 
         <Route path="/edit">
-        
-            {<EditPage
-              setChange={setChange}
-              postId={postId}
-              title={title}
-              setTitle={setTitle}
-              price={price}
-              setPrice={setPrice}
-              description={description}
-              setDescription={setDescription}
-              location={location}
-              setLocation={setLocation} />}
 
-          
+          {<EditPage
+            setChange={setChange}
+            postId={postId}
+            title={title}
+            setTitle={setTitle}
+            price={price}
+            setPrice={setPrice}
+            description={description}
+            setDescription={setDescription}
+            location={location}
+            setLocation={setLocation} />}
+
+
         </Route>
 
         <Route path='/create_post'>
-        
-            {<Create />}
-          
+
+          {<Create />}
+
         </Route>
 
         <Route path='/create_account'>
-          
-            {<CreateAccount />}
-          
+
+          {<CreateAccount />}
+
         </Route>
 
       </Switch>

@@ -11,7 +11,7 @@ export const Login = () => {
     const [message, setMessage] = useState(false)
     const [isMember, setIsMember] = useState(false)
 
-
+   
 
     return (
 
@@ -40,7 +40,7 @@ export const Login = () => {
                             event.preventDefault()
                             try {
                                 const resp = await login(username, password)
-                                setIsMember(resp.success)
+                                setIsMember(resp)
                             } catch (e) {
 
                             }
@@ -58,6 +58,7 @@ export const Login = () => {
     )
 }
 export default Login
+
 
 
 

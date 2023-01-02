@@ -75,10 +75,10 @@ export const login = async (username, password) => {
         const data = await resp.json()
         localStorage.setItem('user', username)
         localStorage.setItem('token', data.data.token)
-        return data;
+        return true;
     }
     catch (e) {
-        console.log('hi')
+     return false 
     }
 }
 

@@ -28,3 +28,13 @@
     height: 100vh;
     background-image: linear-gradient(to bottom right, rgb(13, 13, 13), rgb(53, 53, 46));
 }
+
+.button{
+    color: white;
+    display: flex;
+    border: none;
+    margin-right: 1em;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
+    border-radius: 7px;
+}

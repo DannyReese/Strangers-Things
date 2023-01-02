@@ -1,4 +1,4 @@
-import {Post} from "../components/Post";
+
 import {Search} from "../components/Search";
 import {LoggedOutNav} from "../components/LoggedOutNav";
 import {Login} from "../components/Login";
@@ -13,9 +13,6 @@ const LoggedOut = () => {
                     <Login />
                     <Search  />
                 </div>
-                <div className={LoggedOutCss.post}>
-               <Post />
-               </div>
             </div>
 
         </div>

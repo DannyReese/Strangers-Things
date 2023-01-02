@@ -1,0 +1,21 @@
+*{
+    font-family: 'Oxygen', sans-serif;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+ 
+    
+}
+html{
+    min-height: 100%;
+    position:relative;
+    width:  100%;
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom , rgb(13, 13, 13), rgb(16, 62, 10));    
+}
+a{
+    color: aliceblue;
+ }

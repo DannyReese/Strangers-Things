@@ -14,7 +14,7 @@ const Welcome = ({
   setIsLoggedIn
 }) => {
 
-  return (<>
+  return (<div className={WelcomeCss.WelcomeContainer}>
 
     {<Title />}
 
@@ -33,7 +33,7 @@ const Welcome = ({
 
     </div>
 
-  </>
+  </div>
   )
 }
 

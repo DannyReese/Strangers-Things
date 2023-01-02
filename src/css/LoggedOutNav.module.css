@@ -23,6 +23,7 @@
 }
 
 .cllite{
+    margin-left: .5em;
     display: flex;
     align-items:center
 }

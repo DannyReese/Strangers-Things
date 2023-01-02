@@ -11,7 +11,7 @@ const CreatePost = () => {
     const [location, setLocation] = useState('')
 
 
-    return (<div id='page'>
+    return (
     <div className={CreatePostCss.createpostcontainer}>
 
         <form className={CreatePostCss.createpost} >
@@ -65,11 +65,11 @@ const CreatePost = () => {
                     setPrice('')
                     setLocation('')
                 }
-            }}>Submit</Link>
+            }} className={CreatePostCss.submit}>Submit</Link>
 
         </form>
     </div>
-    </div>
+    
     )
 }
 

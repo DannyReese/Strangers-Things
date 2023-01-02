@@ -25,7 +25,7 @@ a {
     flex-direction: column;
     justify-content: center;
     border-radius: 7px;
-    background-image: linear-gradient(to bottom right, rgb(4, 24, 4),  rgb(100, 170, 30));
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
     margin-bottom: 1em;
     width: 100%;
     height: 30vh;
@@ -72,25 +72,30 @@ a {
 
 }
 
-.searchform{
-   background-color: transparent;
+.searchform {
+    background-color: transparent;
     border: none;
     margin-bottom: 1em;
+    width: 100%;
 }
 
-.searchinput{
+.searchinput {
     margin-left: 1em;
     border: none;
     width: 90%;
-   
+
 }
 
-.searchbar{
+.searchbar {
     display: flex;
     align-items: center;
     padding: 8px;
     color: black;
-    width:40%;
+    width: 40%;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
+}
+
+.time{
+    margin-left: 1em;
 }

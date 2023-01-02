@@ -21,13 +21,13 @@ const Message = ({ setIsOnMessagePage,title, description, othersUsername, locati
             </div>
         </div>
         
-            <textarea value={message} className={MessageCss.messagetext} onChange={event => { setMessage(event.target.value) }}></textarea>
+            <textarea value={message} placeholder="What do you want to say?"className={MessageCss.messagetext} onChange={event => { setMessage(event.target.value) }}></textarea>
             <Link to="/home" onMouseDown={(event) => {
                 event.preventDefault()
                 postMessage(postId, message)
                
                 setMessage('')}
-            } >Submit</Link>
+            }className={MessageCss.submit} >Submit</Link>
            
         </form>
    

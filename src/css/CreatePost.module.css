@@ -1,12 +1,9 @@
-.textdiv{
-    display: flex;
-    justify-content: center;
-}
+
 .createpost {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(48, 48, 3));
-    width: 30vw;
+    width: 100%; 
     margin: none;
     padding: none;
     border: none;
@@ -20,7 +17,7 @@
     background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(48, 48, 3));
     border-style: none;
     border-radius: 5px;
-  
+  width: 40%;
 
 }
 
@@ -46,18 +43,18 @@
     background-image: linear-gradient(to bottom right, rgb(70, 93, 70), rgb(6, 16, 8));
     color: aliceblue;
 }
-
-button {
-    border-radius: 5px;
-    background-color: rgb(57, 77, 38);
-    color: aliceblue;
-    border-style: none;
-}
-
 input:focus{
     outline: none;
 }
 
 textarea:focus{
     outline: none;
+}
+
+.submit{
+    display: flex;
+    margin-right: 1em;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
+    border-radius: 7px;
 }

@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
    align-items: center;
+   width: 100%;
 }
 
 .searchinput {
@@ -41,7 +42,7 @@
     /* border-style: solid; */
     background-image: linear-gradient(to bottom right, rgb(4, 24, 4),  rgb(100, 170, 30));
     border-radius: 7px;
-    width: 40vw;
+  width: 100%;
    
 }
 

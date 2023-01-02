@@ -37,7 +37,7 @@ export const Search = () => {
                 <span class="material-symbols-outlined">
                     search
                 </span>
-                <input value={searchValue} className={SearchCss.searchinput} onChange={event => setSearchValue(event.target.value)}></input>
+                <input value={searchValue} className={SearchCss.searchinput} placeholder="what are you looking for?" onChange={event => setSearchValue(event.target.value)}></input>
 
             
             </div>

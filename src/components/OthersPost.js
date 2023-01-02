@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import { fetchPosts } from "../Api.fetch"
 import { Link } from "react-router-dom"
+import { DateTime } from "luxon"
 import OtherUsersPostCss from '../css/OtherUserPost.module.css'
 
 
@@ -75,6 +76,7 @@ export const OtherUserPosts = ({ setOthersUsername, setTitle, setLocation, setPr
                     key={post._id}
                 >
                     <Link to="message" replace className={OtherUsersPostCss.otherspost}>
+                        <div className={OtherUsersPostCss.time}>{DateTime.fromISO(post.createdAt).toLocaleString(DateTime.DATE_MED)}</div>
                         <div className={OtherUsersPostCss.headerdiv}>
                             <div className={OtherUsersPostCss.header}><h2>{post.title}</h2></div>
 

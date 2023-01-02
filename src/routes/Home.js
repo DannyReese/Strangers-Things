@@ -14,7 +14,7 @@ const Home = ({
     username }) => {
 
 
-    return (<>
+    return (<div className={HomeCss.HomeContainer}>
         <Title />
         <div className={HomeCss.homecontainer}>
             {<OtherUserPosts
@@ -28,7 +28,7 @@ const Home = ({
                 username={username} />}
 
         </div>
-    </>
+    </div>
     )
 }
 

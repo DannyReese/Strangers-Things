@@ -12,8 +12,8 @@ const CreateAccount = () => {
         <div className="title">
 
             <div>
-                <span className="cl">Craigs List</span>
-                <span className="lite">.lite</span>
+                <span className="cl">Strangers</span>
+                <span className="lite">.things</span>
             </div>
 
             <div id='login-container'>
