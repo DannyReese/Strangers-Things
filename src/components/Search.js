@@ -32,13 +32,14 @@ export const Search = () => {
 
 
         }}>
-        
-            <div>
+            <div className={SearchCss.searchbar}>
+            
                 <span class="material-symbols-outlined">
                     search
                 </span>
                 <input value={searchValue} className={SearchCss.searchinput} onChange={event => setSearchValue(event.target.value)}></input>
 
+            
             </div>
         </form>
 

@@ -9,9 +9,11 @@ const Create = () => {
     return (<div className={CreateCss.createpostcontainer}>
         {<Title />}
         <div className={CreateCss.createposts}>
-            {<Post />}
-            <div className='text-div'>
-                {<CreatePost  />}
+            <div className={CreateCss.posts}>
+                {<Post />}
+            </div>
+            <div className={CreateCss.textdiv}>
+                {<CreatePost />}
             </div>
         </div>
     </div>

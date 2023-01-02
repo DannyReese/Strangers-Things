@@ -7,3 +7,15 @@
     background-image: linear-gradient(to bottom , rgb(13, 13, 13), rgb(16, 62, 10));
 
 }
+
+.textdiv{
+    display: flex;
+    justify-content: flex-start;
+    background-color:transparent;
+    width: 50vw;
+    height: 100vh;
+}
+
+.posts{
+    width: 50vw;
+}

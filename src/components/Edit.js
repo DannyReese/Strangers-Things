@@ -1,8 +1,8 @@
-import { editPost } from "../Api.fetch";
+import { editPost,deletePost } from "../Api.fetch";
 import { Link } from "react-router-dom";
 import EditCss from '../css/Edit.module.css'
 
-export const Edit = ({ postId, setChange, title, description, price, location, setTitle, setDescription, setPrice, setLocation }) => {
+export const Edit = ({ postId, title, description, price, location, setTitle, setDescription, setPrice, setLocation }) => {
 
     return (<div>
         <form className={EditCss.editform}>
@@ -52,6 +52,10 @@ export const Edit = ({ postId, setChange, title, description, price, location, s
                     location
                 )
             }}> Submit Changes</Link>
+
+            <Link to='/welcome' onMouseDown={()=>{
+                deletePost(postId)
+            }}>Delete</Link>
         </form>
     </div>
     )

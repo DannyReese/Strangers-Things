@@ -17,8 +17,9 @@
 }
 
 .searchinput {
-    width: 30vw;
-    max-width: 30vw;
+    border: none;
+    width: 90%;
+
 }
 
 .searchform {
@@ -65,4 +66,15 @@ margin: 1em;
 .button{
     background-color: rgb(57, 77, 38);
     border-style: none;
+}
+
+.searchbar{
+ 
+    display: flex;
+   flex-direction: row;
+    width: 80%;
+    padding: .5em;
+    border-radius: 20px;
+    color: black;
+    background-color: rgb(255, 255, 255);
 }

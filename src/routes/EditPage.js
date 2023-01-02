@@ -1,5 +1,6 @@
 import {Title} from "../components/Title"
 import {Edit} from "../components/Edit"
+import EditCss from "../css/EditPage.module.css"
 
 const EditPage = ({
     setChange,
@@ -16,7 +17,7 @@ const EditPage = ({
     return (
         <div>
             {<Title />}
-            <div className='home-container'>
+            <div className={EditCss.homecontainer}>
                 {<Edit
                     setChange={setChange}
                     postId={postId}

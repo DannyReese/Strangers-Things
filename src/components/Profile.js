@@ -30,9 +30,9 @@ const Profile = ({ setLocation, setPostId, setTitle, setPrice, setDescription })
 
         {data ? <div><h1><b>Welcome: {data.username}</b></h1></div> : null}
 
-        {data ? posts.map(post => {
+        {data ? posts.map( post => post.active === false ? null :
 
-            return (
+            
 
                 <form onMouseOver={() => {
                     setPostId(post._id)
@@ -44,9 +44,7 @@ const Profile = ({ setLocation, setPostId, setTitle, setPrice, setDescription })
                     key={post._id}
                 >
                     <div className={ProfileCss.headerdiv}>
-                        <div className={post.active ? ProfileCss.actived : null}>
-                            <div></div>
-                        </div>
+                       
                         <div className={ProfileCss.header}><h3>{post.title.toUpperCase()}</h3></div>
                         <Link to='/edit' className={ProfileCss.edit}>edit</Link>
                     </div>
@@ -57,8 +55,8 @@ const Profile = ({ setLocation, setPostId, setTitle, setPrice, setDescription })
                     </div>
 
                 </form>
-            )
-        }) : null
+            
+        ) : null
         }
 
     </div>

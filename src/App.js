@@ -22,18 +22,18 @@ const App = () => {
   const [postId, setPostId] = useState('')
   const [change, setChange] = useState('')
   const [username, setUsername] = useState('')
-  const [othersUsername ,setOthersUsername] = useState('')
-  
+  const [othersUsername, setOthersUsername] = useState('')
+
   return (<div className={AppCss.container}>
     <HashRouter>
       <Switch>
 
-        <Route exact path='/'>{
+        <Route exact path='/'>
           <LoggedOut />
-         } </Route>
+         </Route>
 
-        <Route path='/welcome'>{
-          <>
+        <Route path='/welcome'>
+          
             {<Welcome
               change={change}
               setUsername={setUsername}
@@ -42,29 +42,27 @@ const App = () => {
               setPrice={setPrice}
               setDescription={setDescription}
               setPostId={setPostId} />}
-          </>
-         } </Route>
+        
+         </Route>
 
         <Route path='/home'>
-          
-            {<Home
-             
-           
-              othersUsername={othersUsername}
-              setOthersUsername={setOthersUsername}
-              setLocation={setLocation}
-              setTitle={setTitle}
-              setPrice={setPrice}
-              setDescription={setDescription}
-              setPostId={setPostId}
-              username={username} />}
-          
+
+          {<Home
+            othersUsername={othersUsername}
+            setOthersUsername={setOthersUsername}
+            setLocation={setLocation}
+            setTitle={setTitle}
+            setPrice={setPrice}
+            setDescription={setDescription}
+            setPostId={setPostId}
+            username={username} />}
+
         </Route>
 
         <Route path="/message">
-          <>
+          
             {<MessagePage
-           
+
               othersUsername={othersUsername}
               setOthersUsername={setOthersUsername}
               setLocation={setLocation}
@@ -79,17 +77,17 @@ const App = () => {
               description={description}
               postId={postId}
             />}
-          </>
+
         </Route>
 
         <Route path='/users-messages'>
-          <>
+          
             {<UserMessages username={username} />}
-          </>
+          
         </Route>
 
         <Route path="/edit">
-          <>
+        
             {<EditPage
               setChange={setChange}
               postId={postId}
@@ -102,24 +100,24 @@ const App = () => {
               location={location}
               setLocation={setLocation} />}
 
-          </>
+          
         </Route>
 
         <Route path='/create_post'>
-          <>
+        
             {<Create />}
-          </>
+          
         </Route>
 
         <Route path='/create_account'>
-          <div>
+          
             {<CreateAccount />}
-          </div>
+          
         </Route>
 
       </Switch>
     </HashRouter>
-    </div>)
+  </div>)
 }
 export default App;
 
