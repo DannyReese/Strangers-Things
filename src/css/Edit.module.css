@@ -60,7 +60,22 @@
     border-style: none;
     width: 100%;
 }
-
+.SubmitChange{
+    display: flex;
+    justify-content: center;
+    margin-right: 1em;
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
+    width: 30%;
+    border-radius: 7px;
+}
+.Delete{
+    display: flex;
+    justify-content: center;
+    margin-right: 1em;
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
+    width: 20%;
+    border-radius: 7px;
+}
 .title {
     font-size: larger;
     border: none;
@@ -74,7 +89,7 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width : 800px){
+@media screen and (max-width : 700px){
     .editform {
         margin: none;
         width: 100vw

@@ -48,7 +48,7 @@ export const creatAccount = async (username, password) => {
         })
         const data = await resp.json()
 
-        console.log(data);
+   return data
 
     }
     catch (e) {
@@ -109,8 +109,7 @@ export const deletePost = async (postId) => {
             }
         })
         const data = await resp.json()
-
-        console.log(data);
+        return data
 
     } catch (e) {
         console.log(e)
@@ -138,7 +137,7 @@ export const editPost = async (postId, title, description, price, location = '[O
             })
         })
         const data = await resp.json()
-        console.log(data)
+       
         return data;
 
     } catch (e) {
@@ -150,7 +149,7 @@ export const search = async (string) => {
     try {
         const array = []
         const inputArray = string.toLowerCase().split(' ')
-        console.log(inputArray)
+      
         const data = await fetchPosts()
         data.data.posts.map(post => post.title.toLowerCase().split(' ').map(word => inputArray.includes(word) ? array.push(post) : null))
         return array
@@ -177,7 +176,7 @@ export const postMessage = async (id, message) => {
         })
         const data = await resp.json()
 
-        console.log(data);
+        return data
 
     } catch (e) {
 

@@ -10,7 +10,7 @@ const SentMessages = () => {
     const username = localStorage.getItem('user')
     const [messages, getMessages] = useState([])
     const [sentMessages, setSentMessages] = useState([])
-    console.log(messages)
+
 
     const getPosts = async () => {
         const resp = await profile()
@@ -33,7 +33,7 @@ const SentMessages = () => {
                 <div className={UserMessagePageCss.message}>
                     {sentMessages.length ? sentMessages.map(message => {
                         return (
-                            <div className={UserMessagePageCss.post} key={message._id}>
+                            <div className={UserMessagePageCss.post} key={`${Math.random()*1}${message._id}`}>
                                 <div className={UserMessagePageCss.title}>Refering to : {message.post.title.toUpperCase()}</div>
                                 <div className={UserMessagePageCss.content}>{message.content}</div>
                             </div>)

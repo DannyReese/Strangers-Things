@@ -10,7 +10,7 @@ const UserMessages = () => {
     const username = localStorage.getItem('user')
     const [messages, getMessages] = useState([])
     const [inbox, setInbox] = useState([])
-    console.log(messages)
+
 
     const getPosts = async () => {
         const resp = await profile()
