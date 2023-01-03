@@ -1,14 +1,12 @@
-
 .createpost {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(48, 48, 3));
-    width: 100%; 
+    width: 100%;
     margin: none;
-    padding: none;
+    padding: .5em;
     border: none;
-  
-
+    border-radius: 7px;
 }
 
 .createpostcontainer {
@@ -16,8 +14,9 @@
     padding: none;
     background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(48, 48, 3));
     border-style: none;
-    border-radius: 5px;
-  width: 40%;
+    border-radius: 7px;
+
+    width: 40%;
 
 }
 
@@ -43,18 +42,27 @@
     background-image: linear-gradient(to bottom right, rgb(70, 93, 70), rgb(6, 16, 8));
     color: aliceblue;
 }
-input:focus{
+
+input:focus {
     outline: none;
 }
 
-textarea:focus{
+textarea:focus {
     outline: none;
 }
 
-.submit{
+.submit {
     display: flex;
     margin-right: 1em;
     justify-content: center;
     background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
     border-radius: 7px;
+}
+
+@media screen and (max-width : 800px){
+
+    .createpostcontainer {
+       margin-top: 1em;
+        width: 90vw;
+}
 }

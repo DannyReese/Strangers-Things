@@ -11,7 +11,7 @@ export const Login = () => {
     const [message, setMessage] = useState(false)
     const [isMember, setIsMember] = useState(false)
 
-   
+
 
     return (
 
@@ -23,14 +23,14 @@ export const Login = () => {
                 <input className={LoginCss.input1}
                     type='text'
                     placeholder='username..'
-                    onChange={event=>setUsername(event.target.value)}
+                    onChange={event => setUsername(event.target.value)}
                 >
                 </input>
 
                 <input className={LoginCss.input2}
                     type='password'
                     placeholder='password..'
-                    onChange={event=>setPassword(event.target.value)}
+                    onChange={event => setPassword(event.target.value)}
                 >
                 </input>
 
@@ -45,7 +45,7 @@ export const Login = () => {
 
                             }
                         }}>
-                    {isMember ? <Link className={LoginCss.loginbutton} to='/welcome'>Login</Link> : <Link className={LoginCss.loginbutton} onClick={()=>setMessage(true)} to='/'>Login</Link>}
+                    {isMember ? <Link className={LoginCss.loginbutton} to='/welcome'>Login</Link> : <Link className={LoginCss.loginbutton} onClick={() => setMessage(true)} to='/'>Login</Link>}
                 </div>
                 <div>
                     {message ? <div id='incorrect-password'>Incorrect username or password</div> : null}

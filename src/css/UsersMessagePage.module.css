@@ -40,3 +40,26 @@
 .content {
     margin-bottom: 1em;
 }
+
+@media screen and (max-width : 800px){
+    .messagescontainer {
+        width: 100vw;
+    }
+
+    .messagescontainer {
+        width: 100vw;
+    }
+
+    .pagecontainer{
+        width: 100vw;
+    }
+
+    .message{
+        width: 100%;
+    }
+
+    .post{
+        width: 100%;
+    }
+
+}

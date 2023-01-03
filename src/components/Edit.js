@@ -1,10 +1,20 @@
-import { editPost,deletePost } from "../Api.fetch";
+import { editPost, deletePost } from "../Api.fetch";
 import { Link } from "react-router-dom";
 import EditCss from '../css/Edit.module.css'
 
-export const Edit = ({setChange, postId, title, description, price, location, setTitle, setDescription, setPrice, setLocation }) => {
+export const Edit = ({
+    setChange,
+    postId,
+    title,
+    description,
+    price,
+    location,
+    setTitle,
+    setDescription,
+    setPrice,
+    setLocation }) => {
 
-    return (<div>
+    return (<div className={EditCss.page}>
         <form className={EditCss.editform}>
             <input className={EditCss.title}
                 value={title}
@@ -12,7 +22,7 @@ export const Edit = ({setChange, postId, title, description, price, location, se
                 type='text'
                 onChange={(event) => setTitle(event.target.value)}
             >
-            </input> 
+            </input>
 
 
             <textarea className={EditCss.description}
@@ -43,23 +53,23 @@ export const Edit = ({setChange, postId, title, description, price, location, se
 
             </div>
             <div className={EditCss.links}>
-            <Link to='/welcome' onMouseDown={() => {
-                editPost(
-                    postId,
-                    title,
-                    description,
-                    price,
-                    location
-                ) 
-                setChange(Math.random()*1)
-            }}> Submit Changes</Link>
+                <Link to='/welcome' onMouseDown={() => {
+                    editPost(
+                        postId,
+                        title,
+                        description,
+                        price,
+                        location
+                    )
+                    setChange(Math.random() * 1)
+                }}> Submit Changes</Link>
 
-            <Link to='/welcome' onMouseDown={()=>{
-                deletePost(postId)
-            }}>Delete</Link>
+                <Link to='/welcome' onMouseDown={() => {
+                    deletePost(postId)
+                }}>Delete</Link>
             </div>
         </form>
-    </div>
+</div>
     )
 }
 

@@ -8,8 +8,6 @@
     margin-bottom: .5em;
 }
 
-
-
 .loginbutton {
     background-color: rgb(100, 170, 30);
     text-decoration: none;
@@ -18,7 +16,7 @@
     display: flex;
     justify-content: center;
     margin-left: .5em;
-   
+
 }
 
 .incorrectpassword {
@@ -27,9 +25,13 @@
 }
 
 .loginform {
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
     margin-top: 1em;
     color: aliceblue;
-    background-image: linear-gradient(to bottom right, rgb(4, 24, 4),  rgb(100, 170, 30));
+    border-radius: 7px;
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
     width: 40vw;
     border-style: none;
 
@@ -37,7 +39,7 @@
 
 
 
-.buttondiv{
+.buttondiv {
     display: flex;
     justify-content: flex-start;
 }

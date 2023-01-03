@@ -1,22 +1,25 @@
-.homecontainer{
+.homecontainer {
     display: flex;
     width: 100%;
     overflow-x: hidden;
     justify-content: center;
 }
 
-
-.loginsearch{
+.loginsearch {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80vw;
     max-width: 80vw;
- 
 }
 
-
-
-.page{
+.page {
     width: 100vw;
+}
+
+@media screen and (max-width : 800px){
+
+    .loginsearch{
+        width: 100vw;
+    }
 }

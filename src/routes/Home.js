@@ -14,11 +14,10 @@ const Home = ({
     username }) => {
 
 
-    return (<div className={HomeCss.HomeContainer}>
+    return (<div className={HomeCss.page}>
         <Title />
         <div className={HomeCss.homecontainer}>
             {<OtherUserPosts
-              
                 setOthersUsername={setOthersUsername}
                 setLocation={setLocation}
                 setTitle={setTitle}

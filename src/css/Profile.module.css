@@ -27,6 +27,8 @@
 .postdiv {
     background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
     margin-bottom: 1em;
+    padding: .5em;
+    border-radius: 7px;
     border: none;
 
 }
@@ -34,9 +36,6 @@
 .headerdiv {
     display: flex;
     justify-content: space-between;
-
-
-
 }
 
 .messages {
@@ -44,26 +43,23 @@
     border-style: none;
 }
 
-
-
 .description {
     margin-bottom: 1em;
 }
 
 .edit {
-
-    display: flex;
+     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.messagesdiv{
+.messagesdiv {
     display: flex;
     justify-content: flex-end;
     width: 100%;
 }
 
-.sentLink{
+.sentLink {
     display: flex;
     justify-content: center;
     margin-right: 1em;
@@ -72,11 +68,36 @@
     border-radius: 7px;
 }
 
-.inboxLink{
+.inboxLink {
     display: flex;
     margin-right: 1em;
     justify-content: center;
     background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
-width: 10%;
-border-radius: 7px;
+    width: 10%;
+    border-radius: 7px;
+}
+
+@media screen and (max-width : 800px){
+
+    .profile{
+        width: 100%;
+    }
+
+    .sentLink {
+        display: flex;
+        justify-content: center;
+        margin-right: 1em;
+        background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
+        width: 20%;
+        border-radius: 7px;
+    }
+    
+    .inboxLink {
+        display: flex;
+        margin-right: 1em;
+        justify-content: center;
+        background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(100, 170, 30));
+        width: 20%;
+        border-radius: 7px;
+    }
 }

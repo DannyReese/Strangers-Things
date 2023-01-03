@@ -24,12 +24,7 @@
     width: 30vw;
 }
 
-.body{
-    height: 100vh;
-    background-image: linear-gradient(to bottom right, rgb(13, 13, 13), rgb(53, 53, 46));
-}
-
-.button{
+.button {
     color: white;
     display: flex;
     border: none;

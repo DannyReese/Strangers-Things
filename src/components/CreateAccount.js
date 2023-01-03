@@ -28,7 +28,7 @@ const CreateAccount = () => {
 
                 const resp = await creatAccount(username, password)
                 const data = await resp.json()
-                console.log(data)
+                return data
             } catch (e) {
 
             }

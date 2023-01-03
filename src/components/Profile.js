@@ -6,7 +6,13 @@ import ProfileCss from "../css/Profile.module.css"
 
 
 
-const Profile = ({ change, setLocation, setPostId, setTitle, setPrice, setDescription }) => {
+const Profile = ({
+    change,
+    setLocation,
+    setPostId,
+    setTitle,
+    setPrice,
+    setDescription }) => {
 
     const [userPosts, setUserPosts] = useState([])
     const [posts, setPosts] = useState([])
@@ -15,7 +21,6 @@ const Profile = ({ change, setLocation, setPostId, setTitle, setPrice, setDescri
     const getPosts = async () => {
         const results = await profile()
         const data = results.data.posts.reverse()
-        console.log(data)
         setPosts(data)
         setUserPosts(results)
     }
@@ -32,8 +37,6 @@ const Profile = ({ change, setLocation, setPostId, setTitle, setPrice, setDescri
         {data ? <div><h1><b>Welcome: {data.username}</b></h1></div> : null}
 
         {data ? posts.map(post => post.active === false ? null :
-
-
 
             <form onMouseOver={() => {
                 setPostId(post._id)

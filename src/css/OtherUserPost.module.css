@@ -99,3 +99,18 @@ a {
 .time{
     margin-left: 1em;
 }
+
+@media screen and (max-width : 800px){
+    .othersposts {
+      
+        overflow-y: scroll;
+        height: 100%;
+       width: 100vw;
+     
+    }
+
+    .searchbar {
+        width: 80%;  
+    }
+
+}

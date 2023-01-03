@@ -8,8 +8,6 @@ export const Search = () => {
     const [searchValue, setSearchValue] = useState('')
     const [result, setResul] = useState('')
 
-
-    // console.log(searchValue)
     useEffect(() => {
         async function search() {
             const resp = await fetchPosts()
@@ -29,17 +27,15 @@ export const Search = () => {
 
         <form className={SearchCss.searchform} onSubmit={(event) => {
             event.preventDefault()
-
-
         }}>
             <div className={SearchCss.searchbar}>
-            
+
                 <span class="material-symbols-outlined">
                     search
                 </span>
                 <input value={searchValue} className={SearchCss.searchinput} placeholder="what are you looking for?" onChange={event => setSearchValue(event.target.value)}></input>
 
-            
+
             </div>
         </form>
 

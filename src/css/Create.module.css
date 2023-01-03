@@ -4,14 +4,6 @@
 }
 
 .createpostcontainer {
-
     background-image: linear-gradient(to bottom, rgb(13, 13, 13), rgb(16, 62, 10));
     height: 100vh;
 }
-
-/* .textdiv {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: transparent;
-  
-} */

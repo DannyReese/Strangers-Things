@@ -1,17 +1,10 @@
-form {
-    padding: .5em;
+
+
+.page{
     display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(48, 48, 3));
-    border:none;
-    border-color: rgb(58, 58, 60);
-    border-width: 1px;
-    border-radius: 5px;
-
+    justify-content: center;
+    width: 100vw;
 }
-
-
-
 
 .description {
     padding-top: 1em;
@@ -20,21 +13,21 @@ form {
     border-style: none;
     color: aliceblue;
     border-style: none;
-    border-bottom :1px solid aliceblue;
+    border-bottom: 1px solid aliceblue;
 }
 
 .priceloc {
     padding: .5em;
     display: flex;
     justify-content: space-between;
-    background-color:transparent;
+    background-color: transparent;
     border-style: none;
     color: aliceblue;
     margin-bottom: .5em;
 }
 
 .price {
-    background-color:transparent;
+    background-color: transparent;
     display: flex;
     justify-content: flex-end;
     border-style: none;
@@ -42,7 +35,7 @@ form {
 }
 
 .location {
-    background-color:transparent;
+    background-color: transparent;
     border-style: none;
     color: aliceblue
 }
@@ -52,23 +45,44 @@ form {
     max-height: 30vh;
     margin-left: 1em;
     width: 40vw;
-    max-width: 40vw;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom right, rgb(4, 24, 4), rgb(48, 48, 3));
+    border: none;
+    border-color: rgb(58, 58, 60);
+    border-width: 1px;
+    border-radius: 5px;
+   
 }
 
-.subbutton{
+.subbutton {
     border-style: none;
     width: 100%;
 }
-.title{
+
+.title {
     font-size: larger;
     border: none;
     color: aliceblue;
     background-color: transparent;
-    border-bottom :1px solid aliceblue;
-    
-   
+    border-bottom: 1px solid aliceblue;
 }
-.links{
+
+.links {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width : 800px){
+    .editform {
+        margin: none;
+        width: 100vw
+       
+    }
+
+    .page{
+        width: 100%;
+    }
+    
 }

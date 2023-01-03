@@ -6,7 +6,15 @@ import { DateTime } from "luxon"
 import OtherUsersPostCss from '../css/OtherUserPost.module.css'
 
 
-export const OtherUserPosts = ({ setOthersUsername, setTitle, setLocation, setPrice, setDescription, setPostId }) => {
+export const OtherUserPosts = ({
+
+    setOthersUsername,
+    setTitle,
+    setLocation,
+    setPrice,
+    setDescription,
+    setPostId }) => {
+
     const username = localStorage.getItem('user')
     const [otherUserPosts, setOtherUserPosts] = useState([])
     const [searchValue, setSearchValue] = useState('')
@@ -40,7 +48,8 @@ export const OtherUserPosts = ({ setOthersUsername, setTitle, setLocation, setPr
                 p.location.toLowerCase().includes(searchValue))
         })
         setResul(searchFilter)
-    }, [searchValue, otherUserPosts]
+    },
+        [searchValue, otherUserPosts]
     )
     return (
 
@@ -52,14 +61,14 @@ export const OtherUserPosts = ({ setOthersUsername, setTitle, setLocation, setPr
 
 
             }}>
-             
+
                 <div>
-                <div className={OtherUsersPostCss.searchbar}>
-                <span className="material-symbols-outlined">
-                    search
-                </span>
-                    <input value={searchValue} placeholder="what are you looking for?" className={OtherUsersPostCss.searchinput} onChange={event => setSearchValue(event.target.value)}></input>
-                </div>
+                    <div className={OtherUsersPostCss.searchbar}>
+                        <span className="material-symbols-outlined">
+                            search
+                        </span>
+                        <input value={searchValue} placeholder="what are you looking for?" className={OtherUsersPostCss.searchinput} onChange={event => setSearchValue(event.target.value)}></input>
+                    </div>
                 </div>
             </form>
             {result ? result.map(post =>
