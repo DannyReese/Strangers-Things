@@ -61,8 +61,8 @@ export const Edit = ({
                         price,
                         location
                     )
-                    setChange(Math.random() * 1)
-                }} className={EditCss.SubmitChange}> Submit Changes</Link>
+                    
+                }} onMouseUp={()=> setChange(Math.random() * 1)} className={EditCss.SubmitChange}> Submit Changes</Link>
 
                 <Link to='/welcome' onMouseDown={() => {
                     deletePost(postId)

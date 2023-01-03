@@ -25,6 +25,9 @@ const Profile = ({
         setUserPosts(results)
     }
 
+    console.log(change)
+        
+    
     useEffect(() => { getPosts() }, [change])
 
 
