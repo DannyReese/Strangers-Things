@@ -34,6 +34,7 @@ export const creatPost = async ({ title, description, price, location }) => {
 
 export const creatAccount = async (username, password) => {
     try {
+        
         const resp = await fetch(`${URL}users/register`, {
             method: "POST",
             headers: {
@@ -41,8 +42,8 @@ export const creatAccount = async (username, password) => {
             },
             body: JSON.stringify({
                 user: {
-                    username: `${username}`,
-                    password: `${password}`
+                    username: username,
+                    password: password
                 }
             })
         })
@@ -184,3 +185,4 @@ export const postMessage = async (id, message) => {
 }
 
 export const username = localStorage.getItem('user')
+export const token = localStorage.getItem('token')
